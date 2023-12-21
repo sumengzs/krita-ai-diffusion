@@ -130,7 +130,7 @@ required_models = [
         SDVersion.all,
         Path("models/clip_vision/SD1.5"),
         "model.safetensors",
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors?download=true",
+        "https://hf-mirror.com/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors?download=true",
         alternatives=[Path("models/clip_vision/SD1.5/pytorch_model.bin")],
     ),
     ModelResource(
@@ -139,7 +139,7 @@ required_models = [
         SDVersion.all,
         Path("models/upscale_models"),
         "4x_NMKD-Superscale-SP_178000_G.pth",
-        "https://huggingface.co/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth",
+        "https://hf-mirror.com/gemasai/4x_NMKD-Superscale-SP_178000_G/resolve/main/4x_NMKD-Superscale-SP_178000_G.pth",
     ),
     ModelResource(
         "ControlNet Inpaint",
@@ -147,7 +147,7 @@ required_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_v11p_sd15_inpaint_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_inpaint_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_inpaint_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Tile",
@@ -155,7 +155,7 @@ required_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1e_sd15_tile_fp16.safetensors",
     ),
     ModelResource(
         "IP-Adapter (SD1.5)",
@@ -163,7 +163,7 @@ required_models = [
         SDVersion.sd15,
         Path("models/ipadapter"),
         "ip-adapter_sd15.safetensors",
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors",
+        "https://hf-mirror.com/h94/IP-Adapter/resolve/main/models/ip-adapter_sd15.safetensors",
         alternatives=[
             Path("custom_nodes/ComfyUI_IPAdapter_plus/models/ip-adapter_sd15.safetensors")
         ],
@@ -174,7 +174,7 @@ required_models = [
         SDVersion.sdxl,
         Path("models/ipadapter"),
         "ip-adapter_sdxl_vit-h.safetensors",
-        "https://huggingface.co/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors",
+        "https://hf-mirror.com/h94/IP-Adapter/resolve/main/sdxl_models/ip-adapter_sdxl_vit-h.safetensors",
         alternatives=[
             Path("custom_nodes/ComfyUI_IPAdapter_plus/models/ip-adapter_sdxl_vit-h.safetensors")
         ],
@@ -185,7 +185,7 @@ required_models = [
         SDVersion.sd15,
         Path("models/loras"),
         "lcm-lora-sdv1-5.safetensors",
-        "https://huggingface.co/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors?download=true",
+        "https://hf-mirror.com/latent-consistency/lcm-lora-sdv1-5/resolve/main/pytorch_lora_weights.safetensors?download=true",
     ),
     ModelResource(
         "LCM-LoRA (SDXL)",
@@ -193,10 +193,11 @@ required_models = [
         SDVersion.sdxl,
         Path("models/loras"),
         "lcm-lora-sdxl.safetensors",
-        "https://huggingface.co/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors?download=true",
+        "https://hf-mirror.com/latent-consistency/lcm-lora-sdxl/resolve/main/pytorch_lora_weights.safetensors?download=true",
     ),
 ]
-
+default_checkpoints = []
+'''
 default_checkpoints = [
     ModelResource(
         "Realistic Vision",
@@ -223,7 +224,7 @@ default_checkpoints = [
         "https://civitai.com/api/download/models/198530",
     ),
 ]
-
+'''
 upscale_models = [
     ModelResource(
         "HAT Super-Resolution (quality)",
@@ -231,7 +232,7 @@ upscale_models = [
         SDVersion.all,
         Path("models/upscale_models"),
         "HAT_SRx4_ImageNet-pretrain.pth",
-        "https://huggingface.co/Acly/hat/resolve/main/HAT_SRx4_ImageNet-pretrain.pth",
+        "https://hf-mirror.com/Acly/hat/resolve/main/HAT_SRx4_ImageNet-pretrain.pth",
     ),
     ModelResource(
         "Real HAT GAN Super-Resolution (sharper)",
@@ -239,7 +240,7 @@ upscale_models = [
         SDVersion.all,
         Path("models/upscale_models"),
         "Real_HAT_GAN_sharper.pth",
-        "https://huggingface.co/Acly/hat/resolve/main/Real_HAT_GAN_sharper.pth",
+        "https://hf-mirror.com/Acly/hat/resolve/main/Real_HAT_GAN_sharper.pth",
     ),
 ]
 
@@ -250,7 +251,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11p_sd15_scribble_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_scribble_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_scribble_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Line Art",
@@ -258,7 +259,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_v11p_sd15_lineart_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_lineart_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_lineart_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Soft Edge",
@@ -266,7 +267,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_v11p_sd15_softedge_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_softedge_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_softedge_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Canny Edge",
@@ -274,7 +275,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_v11p_sd15_canny_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_canny_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_v11p_sd15_canny_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Depth",
@@ -282,7 +283,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11f1p_sd15_depth_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1p_sd15_depth_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11f1p_sd15_depth_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Normal",
@@ -290,7 +291,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11p_sd15_normalbae_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_normalbae_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_normalbae_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Pose",
@@ -298,7 +299,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11p_sd15_openpose_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_openpose_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_openpose_fp16.safetensors",
     ),
     ModelResource(
         "ControlNet Segmentation",
@@ -306,7 +307,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_lora_rank128_v11p_sd15_seg_fp16.safetensors",
-        "https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_seg_fp16.safetensors",
+        "https://hf-mirror.com/comfyanonymous/ControlNet-v1-1_fp16_safetensors/resolve/main/control_lora_rank128_v11p_sd15_seg_fp16.safetensors",
     ),
     ModelResource(
         "Controlnet Stencil",
@@ -314,7 +315,7 @@ optional_models = [
         SDVersion.sd15,
         Path("models/controlnet"),
         "control_v1p_sd15_qrcode_monster.safetensors",
-        "https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster/resolve/main/control_v1p_sd15_qrcode_monster.safetensors",
+        "https://hf-mirror.com/monster-labs/control_v1p_sd15_qrcode_monster/resolve/main/control_v1p_sd15_qrcode_monster.safetensors",
     ),
     ModelResource(
         "ControlNet Line Art (XL)",
@@ -322,7 +323,7 @@ optional_models = [
         SDVersion.sdxl,
         Path("models/controlnet"),
         "sai_xl_sketch_256lora.safetensors",
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/sai_xl_sketch_256lora.safetensors",
+        "https://hf-mirror.com/lllyasviel/sd_control_collection/resolve/main/sai_xl_sketch_256lora.safetensors",
     ),
     ModelResource(
         "ControlNet Canny Edge (XL)",
@@ -330,7 +331,7 @@ optional_models = [
         SDVersion.sdxl,
         Path("models/controlnet"),
         "sai_xl_canny_256lora.safetensors",
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/sai_xl_canny_256lora.safetensors",
+        "https://hf-mirror.com/lllyasviel/sd_control_collection/resolve/main/sai_xl_canny_256lora.safetensors",
     ),
     ModelResource(
         "ControlNet Depth (XL)",
@@ -338,7 +339,7 @@ optional_models = [
         SDVersion.sdxl,
         Path("models/controlnet"),
         "sai_xl_depth_256lora.safetensors",
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/sai_xl_depth_256lora.safetensors",
+        "https://hf-mirror.com/lllyasviel/sd_control_collection/resolve/main/sai_xl_depth_256lora.safetensors",
     ),
     ModelResource(
         "ControlNet Pose (XL)",
@@ -346,7 +347,7 @@ optional_models = [
         SDVersion.sdxl,
         Path("models/controlnet"),
         "thibaud_xl_openpose_256lora.safetensors",
-        "https://huggingface.co/lllyasviel/sd_control_collection/resolve/main/thibaud_xl_openpose_256lora.safetensors",
+        "https://hf-mirror.com/lllyasviel/sd_control_collection/resolve/main/thibaud_xl_openpose_256lora.safetensors",
     ),
 ]
 
